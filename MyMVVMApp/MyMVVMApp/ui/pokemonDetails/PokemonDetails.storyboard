@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GKX-e8-b8z">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pokemon Details View Controller-->
+        <scene sceneID="jJN-Yu-WE9">
+            <objects>
+                <viewController storyboardIdentifier="PokemonDetails" id="GKX-e8-b8z" customClass="PokemonDetailsViewController" customModule="MyMVVMApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NVO-Yu-OXY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oOZ-FG-sef">
+                                <rect key="frame" x="87" y="124" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="ddr-mi-VcK"/>
+                                    <constraint firstAttribute="width" constant="240" id="x37-hb-gnl"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="doo-3Y-Cgn">
+                                <rect key="frame" x="12" y="267" width="390" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fCZ-C2-nA4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fCZ-C2-nA4" firstAttribute="trailing" secondItem="doo-3Y-Cgn" secondAttribute="trailing" constant="12" id="1RS-A5-x8Y"/>
+                            <constraint firstItem="oOZ-FG-sef" firstAttribute="centerX" secondItem="NVO-Yu-OXY" secondAttribute="centerX" id="NOZ-Oe-L01"/>
+                            <constraint firstItem="fCZ-C2-nA4" firstAttribute="trailing" secondItem="oOZ-FG-sef" secondAttribute="trailing" constant="87" id="VPn-nM-btg"/>
+                            <constraint firstItem="doo-3Y-Cgn" firstAttribute="leading" secondItem="fCZ-C2-nA4" secondAttribute="leading" constant="12" id="Vpc-XW-Hz2"/>
+                            <constraint firstItem="oOZ-FG-sef" firstAttribute="leading" secondItem="fCZ-C2-nA4" secondAttribute="leading" constant="87" id="bTV-9H-393"/>
+                            <constraint firstItem="doo-3Y-Cgn" firstAttribute="centerX" secondItem="NVO-Yu-OXY" secondAttribute="centerX" id="nOO-DJ-1gE"/>
+                            <constraint firstItem="oOZ-FG-sef" firstAttribute="top" secondItem="fCZ-C2-nA4" secondAttribute="top" constant="80" id="sBT-5l-Njr"/>
+                            <constraint firstItem="doo-3Y-Cgn" firstAttribute="top" secondItem="oOZ-FG-sef" secondAttribute="bottom" constant="15" id="ugA-Lj-zH7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="doo-3Y-Cgn" id="FUI-xb-gYg"/>
+                        <outlet property="pokemonImageView" destination="oOZ-FG-sef" id="I8f-Qs-1QU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bcy-aZ-gMT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="195.6521739130435" y="116.51785714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
