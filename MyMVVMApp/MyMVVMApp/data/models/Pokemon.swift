@@ -6,6 +6,7 @@
 //
 
 struct Pokemon: Decodable {
+    let id: Int
     let name: String
     let imageUrl: String
 }

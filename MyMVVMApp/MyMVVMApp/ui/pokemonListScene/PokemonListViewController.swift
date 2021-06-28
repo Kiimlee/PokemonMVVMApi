@@ -32,7 +32,6 @@ class PokemonListViewController: UIViewController, Subscribable {
                 print("loading")
                 
             case .loaded(let pokemons):
-                print("loaded")
                 self?.updateTableView(with: pokemons)
             }
         }))
@@ -56,13 +55,7 @@ extension PokemonListViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let storyboard = UIStoryboard(name: "PokemonDetails", bundle: nil)
-        guard let detailsViewController = storyboard.instantiateViewController(withIdentifier: "PokemonDetails") as? PokemonDetailsViewController else {
-            return
-        }
-        detailsViewController.pokemon = pokemons[indexPath.row]
-        detailsViewController.modalPresentationStyle = .fullScreen
-        self.navigationController?.pushViewController(detailsViewController, animated: true)
+        viewModel?.goToDetails(with: pokemons[indexPath.row].id)
     }
     
     private func updateTableView(with pokemons: [Pokemon]) {

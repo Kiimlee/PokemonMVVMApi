@@ -22,13 +22,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.addGestureRecognizer(sextupleTap)
 
         if let window = window {
-            let viewModel = PokemonListViewModel(networkingService: NetworkingApi())
 
             let storyboard = UIStoryboard(name: "PokemonList", bundle: nil)
             guard let initialViewController = storyboard.instantiateViewController(withIdentifier: "PokemonList") as? PokemonListViewController else {
                 return true
             }
             
+            let viewModel = PokemonListViewModel(networkingService: NetworkingApi(), navigator: Navigator(initialViewController))
+
             initialViewController.viewModel = viewModel
             
             window.rootViewController = UINavigationController(rootViewController: initialViewController)

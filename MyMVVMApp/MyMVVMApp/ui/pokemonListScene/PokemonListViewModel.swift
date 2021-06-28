@@ -21,9 +21,11 @@ final class PokemonListViewModel: Subscribable {
 
     // Outputs
     private let networkingService: NetworkingService
-    
-    init(networkingService: NetworkingService) {
+    private let navigator: NavigatorProtocol
+
+    init(networkingService: NetworkingService, navigator: NavigatorProtocol) {
         self.networkingService = networkingService
+        self.navigator = navigator
     }
     
     func onViewDidLoad() {
@@ -39,5 +41,11 @@ final class PokemonListViewModel: Subscribable {
         }, onError: { _ in
             print("error")
         }))
+    }
+    
+    // MARK: Actions
+    
+    func goToDetails(with id: Int) {
+        navigator.toPokemonDetails(with: id)
     }
 }

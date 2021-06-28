@@ -53,6 +53,7 @@ extension Nintendo: TargetType {
 
 protocol NetworkingService {
     func getPokemons() -> Observable<[Pokemon]?>
+    func getPokemonDetails(with id: Int) -> Observable<Pokemon?>
 }
 
 final class NetworkingApi: NetworkingService {
@@ -70,6 +71,14 @@ final class NetworkingApi: NetworkingService {
         return filteredMoyaResponse().map { response -> [Pokemon] in
             let pokemons = try decoder.decode([PokemonDto].self, from: response.data)
             return self.mapper.map(dtos: pokemons)
+        }
+    }
+    
+    func getPokemonDetails(with id: Int) -> Observable<Pokemon?> {
+        let decoder = JSONDecoder()
+        return filteredMoyaResponse().map { response -> Pokemon? in
+            let pokemons = try decoder.decode([PokemonDto].self, from: response.data)
+            return self.mapper.mapDetails(dtos: pokemons, id: id)
         }
     }
     
