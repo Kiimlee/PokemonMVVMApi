@@ -16,7 +16,7 @@ public enum Nintendo {
 
 extension Nintendo: TargetType {
     public var baseURL: URL {
-        return URL(string: "http://demo5447186.mockable.io/")!
+        return URL(string: AppConfig.shared.pokemonApiBaseURL)!
     }
     
     public var path: String {
@@ -61,12 +61,6 @@ final class NetworkingApi: NetworkingService {
     private let mapper = PokemonMapper()
 
     func getPokemons() -> Observable<[Pokemon]?> {
-//        let provider = MoyaProvider<Nintendo>()
-//        return provider.rx.request(.pokemons)
-//            .filterSuccessfulStatusCodes()
-//            .mapDecodable([PokemonDto].self)
-//            .map { self.mapper.map(dtos: $0)}
-        
         let decoder = JSONDecoder()
         return filteredMoyaResponse().map { response -> [Pokemon] in
             let pokemons = try decoder.decode([PokemonDto].self, from: response.data)

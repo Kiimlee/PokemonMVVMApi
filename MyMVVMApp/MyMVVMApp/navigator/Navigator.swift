@@ -25,6 +25,8 @@ class Navigator: NavigatorProtocol {
         guard let detailsViewController = storyboard.instantiateViewController(withIdentifier: "PokemonDetails") as? PokemonDetailsViewController else {
             return
         }
+        
+        // Avoir qu'un seule instance du NetworkingApi
         let viewModel = PokemonDetailsViewModel(networkingService: NetworkingApi(), pokemonId: id)
         
         detailsViewController.viewModel = viewModel

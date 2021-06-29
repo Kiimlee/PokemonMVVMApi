@@ -25,6 +25,7 @@
 		714D5ED22689B269009587B8 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714D5ED12689B269009587B8 /* Navigator.swift */; };
 		714D5EDA2689B2D9009587B8 /* NavigatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714D5ED92689B2D9009587B8 /* NavigatorProtocol.swift */; };
 		714D5EDF2689B6DD009587B8 /* PokemonDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714D5EDE2689B6DD009587B8 /* PokemonDetailsViewModel.swift */; };
+		715000D3268B0DD000D53E0D /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715000D2268B0DD000D53E0D /* AppConfig.swift */; };
 		7155E46D267892FC0053D17E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7155E46C267892FC0053D17E /* AppDelegate.swift */; };
 		7155E476267892FE0053D17E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7155E475267892FE0053D17E /* Assets.xcassets */; };
 		7155E479267892FE0053D17E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7155E477267892FE0053D17E /* LaunchScreen.storyboard */; };
@@ -70,6 +71,7 @@
 		714D5ED12689B269009587B8 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		714D5ED92689B2D9009587B8 /* NavigatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorProtocol.swift; sourceTree = "<group>"; };
 		714D5EDE2689B6DD009587B8 /* PokemonDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailsViewModel.swift; sourceTree = "<group>"; };
+		715000D2268B0DD000D53E0D /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		7155E469267892FC0053D17E /* MyMVVMApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMVVMApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7155E46C267892FC0053D17E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7155E475267892FE0053D17E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 				714D5ED02689B259009587B8 /* navigator */,
 				714965412685D78200DBCA90 /* ui */,
 				7155E46C267892FC0053D17E /* AppDelegate.swift */,
+				715000D2268B0DD000D53E0D /* AppConfig.swift */,
 				714A2EAC26832AE0001BE8CA /* data */,
 				714A2EFC26833083001BE8CA /* utils */,
 				7155E475267892FE0053D17E /* Assets.xcassets */,
@@ -547,6 +550,7 @@
 				7155E46D267892FC0053D17E /* AppDelegate.swift in Sources */,
 				714A2F082683373C001BE8CA /* PokemonListCell.swift in Sources */,
 				714D5EDA2689B2D9009587B8 /* NavigatorProtocol.swift in Sources */,
+				715000D3268B0DD000D53E0D /* AppConfig.swift in Sources */,
 				714D5ED22689B269009587B8 /* Navigator.swift in Sources */,
 				714B2BB126846A0600DAEAE6 /* PokemonDto.swift in Sources */,
 				714A2EEF26832E1C001BE8CA /* PokemonListViewModel.swift in Sources */,
