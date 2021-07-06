@@ -12,7 +12,7 @@ final class PokemonDetailsViewModel: Subscribable {
     
     // MARK: Constants
 
-    enum ResultState {
+    enum ResultState: Equatable {
         case loading
         case loaded(pokemon: Pokemon?)
     }

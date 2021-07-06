@@ -1,41 +1,70 @@
 PODS:
   - Alamofire (5.4.3)
+  - Cuckoo (1.5.1):
+    - Cuckoo/Swift (= 1.5.1)
+  - Cuckoo/Swift (1.5.1)
   - FLEX (4.4.1)
+  - Mockingjay (3.0.0-alpha.1):
+    - Mockingjay/Core (= 3.0.0-alpha.1)
+    - Mockingjay/XCTest (= 3.0.0-alpha.1)
+  - Mockingjay/Core (3.0.0-alpha.1):
+    - URITemplate (~> 3.0)
+  - Mockingjay/XCTest (3.0.0-alpha.1):
+    - Mockingjay/Core
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
   - Moya/RxSwift (14.0.0):
     - Moya/Core
     - RxSwift (~> 5.0)
+  - RxBlocking (5.1.1):
+    - RxSwift (~> 5)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
+  - RxTest (5.1.2):
+    - RxSwift (~> 5)
+  - URITemplate (3.0.0)
 
 DEPENDENCIES:
+  - Cuckoo
   - FLEX
+  - Mockingjay (= 3.0.0-alpha.1)
   - Moya/RxSwift
+  - RxBlocking
   - RxCocoa (= 5.1.1)
   - RxSwift (= 5.1.1)
+  - RxTest
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Cuckoo
     - FLEX
+    - Mockingjay
     - Moya
+    - RxBlocking
     - RxCocoa
     - RxRelay
     - RxSwift
+    - RxTest
+    - URITemplate
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  Cuckoo: 9124fe138270854903483c270370e6e7658fbc9b
   FLEX: 7ca2c8cd3a435ff501ff6d2f2141e9bdc934eaab
+  Mockingjay: 0f7c5aa49c7f1b95621cee3c79b557141f5a225c
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  RxBlocking: 5f700a78cad61ce253ebd37c9a39b5ccc76477b4
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  RxTest: 274549b747dca56f47c52c8991ec5cf797ecfe40
+  URITemplate: 58e0d47f967006c5d59888af5356c4a8ed3b197d
 
-PODFILE CHECKSUM: f6319426936f8960b29dfc52c8d30557e765b595
+PODFILE CHECKSUM: 5cd331c8690b8102c84fb48f5c2c51a4e37beace
 
 COCOAPODS: 1.10.1

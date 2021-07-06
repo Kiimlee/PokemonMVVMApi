@@ -5,6 +5,7 @@ def shared_pods
     pod 'RxSwift', '5.1.1'
     pod 'FLEX'
     pod 'Moya/RxSwift'
+    pod 'RxCocoa', '5.1.1'
 end
 
 
@@ -12,15 +13,13 @@ target 'MyMVVMApp' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   shared_pods
-  pod 'RxCocoa', '5.1.1'
 
   target 'MyMVVMAppTests' do
     inherit! :search_paths
 	shared_pods
+  pod 'RxTest'
+  pod 'RxBlocking'
+  pod 'Mockingjay', '3.0.0-alpha.1'
+  pod 'Cuckoo'
   end
-
-  target 'MyMVVMAppUITests' do
-  shared_pods
-  end
-
 end

@@ -16,7 +16,10 @@ public enum Nintendo {
 
 extension Nintendo: TargetType {
     public var baseURL: URL {
-        return URL(string: AppConfig.shared.pokemonApiBaseURL)!
+        switch self {
+        case .pokemons:
+            return URL(string: AppConfig.shared.pokemonApiBaseURL)!
+        }
     }
     
     public var path: String {
@@ -51,14 +54,13 @@ extension Nintendo: TargetType {
     }
 }
 
-protocol NetworkingService {
-    func getPokemons() -> Observable<[Pokemon]?>
-    func getPokemonDetails(with id: Int) -> Observable<Pokemon?>
-}
-
 final class NetworkingApi: NetworkingService {
-    
+    private let targetType: TargetType!
     private let mapper = PokemonMapper()
+    
+    init(targetType: TargetType) {
+        self.targetType = targetType
+    }
 
     func getPokemons() -> Observable<[Pokemon]?> {
         let decoder = JSONDecoder()
@@ -79,7 +81,7 @@ final class NetworkingApi: NetworkingService {
     func filteredMoyaResponse() -> Observable<Response> {
         return Observable.create { observer in
             let provider = MoyaProvider<Nintendo>()
-            provider.request(.pokemons) { result in
+            provider.request(self.targetType as! Nintendo) { result in
                 switch result {
                 case .success(let response):
                     do {
@@ -95,24 +97,5 @@ final class NetworkingApi: NetworkingService {
             }
             return Disposables.create()
         }
-    }
-}
-
-extension PrimitiveSequence where Trait == SingleTrait, Element == Response {
-    
-    /// Maps data received from the signal into a an object which implements the `Decodable` protocol
-    /// If the conversion fails, the signal errors.
-    func mapDecodable<T: Decodable>(_ type: T.Type) -> Single<T> {
-        flatMap { Single.just(try $0.mapDecodable(type)) }
-    }
-}
-
-private extension Response {
-    
-    /// Maps response into an object which implements the `Decodable` protocol
-    /// If the conversion fails, throws decoding error
-    func mapDecodable<T: Decodable>(_ type: T.Type) throws -> T {
-        let decoder = JSONDecoder()
-        return try decoder.decode(T.self, from: self.data)
     }
 }

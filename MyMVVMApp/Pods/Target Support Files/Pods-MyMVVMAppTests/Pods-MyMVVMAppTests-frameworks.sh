@@ -178,13 +178,27 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FLEX/FLEX.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Moya/Moya.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Cuckoo/Cuckoo.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Mockingjay/Mockingjay.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/URITemplate/URITemplate.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FLEX/FLEX.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Moya/Moya.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Cuckoo/Cuckoo.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Mockingjay/Mockingjay.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/URITemplate/URITemplate.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 return true
             }
             
-            let viewModel = PokemonListViewModel(networkingService: NetworkingApi(), navigator: Navigator(initialViewController))
+            let viewModel = PokemonListViewModel(networkingService: DataManager.shared.networkingService, navigator: Navigator(initialViewController))
 
             initialViewController.viewModel = viewModel
             

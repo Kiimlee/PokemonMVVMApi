@@ -26,8 +26,8 @@ class Navigator: NavigatorProtocol {
             return
         }
         
-        // Avoir qu'un seule instance du NetworkingApi
-        let viewModel = PokemonDetailsViewModel(networkingService: NetworkingApi(), pokemonId: id)
+        // Avoir qu'une seule instance du NetworkingApi
+        let viewModel = PokemonDetailsViewModel(networkingService: DataManager.shared.networkingService, pokemonId: id)
         
         detailsViewController.viewModel = viewModel
         detailsViewController.modalPresentationStyle = .fullScreen

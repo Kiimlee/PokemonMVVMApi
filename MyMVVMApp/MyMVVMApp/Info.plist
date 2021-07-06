@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>POKEMON_API_URL</key>
-	<string>$(POKEMON_API_URL)</string>
+	<string>http://demo5447186.mockable.io/</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

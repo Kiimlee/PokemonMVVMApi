@@ -11,7 +11,7 @@ import RxCocoa
 final class PokemonListViewModel: Subscribable {
     
     // MARK: Constants
-    enum ResultState {
+    enum ResultState: Equatable {
         case loading
         case loaded(pokemons: [Pokemon])
     }
